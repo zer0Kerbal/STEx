@@ -1,0 +1,4 @@
+0.0.0.1
+  creation by zer0Kerbal
+  created .version
+  created ChangeLog.txt
