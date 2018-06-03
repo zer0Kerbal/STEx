@@ -1,0 +1,25 @@
+{
+  "NAME": "SGex",
+  "URL": "https://raw.githubusercontent.com/zer0Kerbal/SGEx/master/SGEx.version",
+  "VERSION": {
+    "MAJOR": 0,
+    "MINOR": 0,
+    "PATCH": 0,
+    "BUILD": 1
+  },
+  "KSP_VERSION": {
+    "MAJOR": 1,
+    "MINOR": 4,
+    "PATCH": 1
+  },
+  "KSP_VERSION_MIN": {
+    "MAJOR": 1,
+    "MINOR": 4,
+    "PATCH": 1
+  },
+  "KSP_VERSION_MAX": {
+    "MAJOR": 1,
+    "MINOR": 4,
+    "PATCH": 99
+  }
+}
