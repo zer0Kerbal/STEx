@@ -1,3 +1,12 @@
+// SGEx (StarGuise Experimental)
+// FILE: Version.txt
+// ——————————————————————————————————————————————————
+// status: β 0.0.0.1
+// ——————————————————————————————————————————————————
+// FOR: SGEx-Decals
+// ——————————————————————————————————————————————————
+// Ω NEEDS: Nebula
+
 {
   "NAME": "SGEx-Decals",
   "URL": "https://raw.githubusercontent.com/zer0Kerbal/SGEx/master/SGEx.version",
