@@ -3,18 +3,21 @@
 
 *StarGuise Experimental presents*
 
-**Decals:**
+### Decals:
   1. Tugboat Green
   
-  ***planned***
-  2. Tugboat Nuclear
-  3. mTugboat / mSpaceTug / mHelper
-  4. Station
-  5. Base
-  6. ComSat
-  7. Planet related OPS
+  **planned**
+  * Tugboat Nuclear (various coloring, some with additional graphics)
+  * mTugboat / mSpaceTug / mHelper
+  * Station
+  * Base
+  * ComSat
+  * Planet related OPS
+
+  ___
   
-  
-Needs Nebula's patch.
+Dependencies: [Nebula](https://github.com/linuxgurugamer/NEBULA_Decals.)
 
 TWYLLTR (Take What You Like, Leave the Rest) collection.
+
+[logo]: https://github.com/zer0Kerbal/SGEx/blob/SGEx-Decals/Decals/TugBoat/00.png "TugBoat Green"
