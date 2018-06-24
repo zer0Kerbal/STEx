@@ -20,4 +20,6 @@ Dependencies: [Nebula](https://github.com/linuxgurugamer/NEBULA_Decals.)
 
 TWYLLTR (Take What You Like, Leave the Rest) collection.
 
-[logo]: https://github.com/zer0Kerbal/SGEx/blob/SGEx-Decals/Decals/TugBoat/00.png "TugBoat Green"
+![alt text](https://github.com/zer0Kerbal/SGEx/blob/SGEx-Decals/Decals/TugBoat/00.png "TugBoat Green")
+
+###### v0.0.0.3
