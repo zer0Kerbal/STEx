@@ -18,7 +18,7 @@
 // ——————————————————————————————————————————————————
 // original creation: 17 Jun 18
 
-// This 'sentence' provides the following ralated functions.
+// This 'sentence' provides the following related functions.
 	// function SCANSat_on{
 	// function SCANSat_off{
 	// function SCANSat_toggle{
@@ -30,33 +30,37 @@
 	// TODO: /help parameter
 
 function SCANSat_on{
-  set p TO ship:partstitled("SCAN RADAR Altimetry Sensor")[0].
-  set m TO p:getmodule("SCANsat").
-  m:doevent("start scan: radar").
+  SET p TO SHIP:PARTSTITLED("SCAN RADAR Altimetry Sensor")[0].
+  SET m TO p:GETMODULE("SCANsat").
+  m:DOEVENT("start scan: radar").
 }
 
 function SCANSat_off{
-  set p TO ship:partstitled("SCAN RADAR Altimetry Sensor")[0].
-  set m TO p:getmodule("SCANsat").
-  m:doevent("stop scan: radar").
+  SET p TO SHIP:PARTSTITLED("SCAN RADAR Altimetry Sensor")[0].
+  SET m TO p:GETMODULE("SCANsat").
+  m:DOEVENT("stop scan: radar").
 }
 
 function SCANSat_toggle{
-  set p TO ship:partstitled("SCAN RADAR Altimetry Sensor")[0].
-  set m TO p:getmodule("SCANsat").
-  m:doevent("toggle scan: radar").
+  SET p TO SHIP:PARTSTITLED("SCAN RADAR Altimetry Sensor")[0].
+  SET m TO p:GETMODULE("SCANsat").
+  m:DOEVENT("toggle scan: radar").
 }
 
 function SCANSat_analyzedata
-  set p TO ship:partstitled("SCAN RADAR Altimetry Sensor")[0].
-  set m TO p:getmodule("SCANexperiment").
-  m:doevent("analyze data: radar").
+  SET p TO SHIP:PARTSTITLED("SCAN RADAR Altimetry Sensor")[0].
+  SET m TO p:GETMODULE("SCANexperiment").
+  m:DOEVENT("analyze data: radar").
 }
 
 
 // ——————————————————————————————————————————————————
 // ——— changelog ————————————————————————————————————
 // ——————————————————————————————————————————————————
+
+// v 1.0.0.1
+	// typo
+	// reserved word capitalization
 
 // v 1.0.0.0
 	// initial commit to GitHub
