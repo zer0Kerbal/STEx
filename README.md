@@ -1,4 +1,4 @@
-# STEx
+# SGEx
 StarGuise Experimental
 
 
