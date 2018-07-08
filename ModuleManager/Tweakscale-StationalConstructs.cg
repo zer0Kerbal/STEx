@@ -1,0 +1,10 @@
+// SGEx (StarGuise Experimental)
+
+@PART[JConcave*]:NEEDS[StationalCunstructs]
+{
+	MODULE
+	{
+		name = TweakScale
+		type = stack
+	}
+}
