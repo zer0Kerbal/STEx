@@ -1,0 +1,15 @@
+SGEx (StarGuise Experimental)
+FILE: ChangeLog.txt
+——————————————————————————————————————————————————
+status: β 0.0.0.1
+——————————————————————————————————————————————————
+FOR: SGEx-Decals
+——————————————————————————————————————————————————
+Ω NEEDS: Nebula
+
+0.0.0.1
+  creation by zer0Kerbal
+  uploaded tugboat
+  created .version
+  created README.md
+  created ChangeLog.txt
