@@ -48,7 +48,7 @@ declare global FUNCTION partsLabTransmitScience {
     }.
 }
 
-PRINT "Transmitting Availablle Science Research".
+PRINT "Transmitting Available Science Research".
 partsLabTransmitScience().
 
 // ——————————————————————————————————————————————————
