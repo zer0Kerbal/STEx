@@ -1,1 +1,5 @@
-Welded KSS (Kerbin Space Station) Parts - for reducing part count in stations.
+# SGEx
+## StarGuise Experimental
+
+## *WeldMelded Station Parts*
+### for reducing part count in stations.
