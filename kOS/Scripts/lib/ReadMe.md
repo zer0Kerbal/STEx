@@ -9,7 +9,7 @@
 +(ch_)	*chapters* consists of several pages  
 +(pg_)	*pages* consists of several paragraphs  
 +(pa_)	*paragraphs* consists of several sentences, usually related.  
-+(sn_)	*sentences* consist of several woods, usually related.  
++(sn_)	*sentences* consist of several words, usually related.  
 +(wd_)	*words* are the smallest unit. one function.  
 
 words, sentences, paragraphs, pages, chapters are all used to make up book that make up the library.
