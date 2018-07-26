@@ -3,15 +3,14 @@
 
 ## Naming Protocols for libary files.
 
-*the files should be divided into the following types:*
-
-(lb_)	library consisists of multiple books
-(bk_)	book consists of several chapters
-(ch_)	chapter consists of several pages
-(pg_)	pages consist of several paragraphs
-(pa_)	paragraphs consists of several sentences, usually related.
-(sn_)	sentence consist of several woods, usually related.
-(wd_)	smallest unit. one function.
+*the files should be divided into the following types:*  
++(lb_)	*library* consists of multiple books  
++(bk_)	*books* consists of several chapters  
++(ch_)	*chapters* consists of several pages  
++(pg_)	*pages* consists of several paragraphs  
++(pa_)	*paragraphs* consists of several sentences, usually related.  
++(sn_)	*sentences* consist of several woods, usually related.  
++(wd_)	*words* are the smallest unit. one function.  
 
 words, sentences, paragraphs, pages, chapters are all used to make up book that make up the library.
 
@@ -24,7 +23,7 @@ same goes for sentences, paragraphs, pages, and chapters. all that will remain i
 #### Naming Protocols for library files
 #### zer0Kerbal
 #### June 2018
-#### v 1.0.0.0
+#### v 1.0.0.1
 
 ## MIT License
 
