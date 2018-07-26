@@ -57,4 +57,4 @@ partsLabTransmitScience().
 
 // v 0.0.0.1
 	// creation by zer0Kerbal
-	// 
+	// MIT License
