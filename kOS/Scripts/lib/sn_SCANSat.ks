@@ -85,4 +85,5 @@ function SCANSat_analyzedata
    // conversion to primitive library item - sentence of 4 words.
 
 // v 0.0.0.1
-// creation by zer0Kerbal
+  // creation by zer0Kerbal
+  // MIT License
