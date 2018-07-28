@@ -27,19 +27,17 @@
 @LAZYGLOBAL off.
 function shipsunlight {
     parameter _now is TIME:SECONDS.
+	
 	SET sl TO 1.
     SET vShp TO SHIP:POSITION.
     SET vShpFutr TO POSITIONAT(SHIP,_now).
-   
     SET vShpSun TO POSITIONAT(BODY("SUN"), TIME:SECONDS).
     SET vShpBdy TO POSITIONAT(ORBIT:BODY, TIME:SECONDS).
-   
     SET vShpFutrBdy TO -vShpBdy + vShpFutr.
     SET vShpFutrSun TO -vShpSun + vShpFutr.
-   
     SET vSunBdy TO -vShpSun + vShpBdy.
-   
     SET shdAng TO ARCTAN(ORBIT:BODY:RADIUS/vSunBdy:MAG).
+	
     IF (VANG(vSunBdy,vShpFutrSun) < shdAng)
         AND (vShpFutrSun:MAG > vSunBdy:MAG)
     { SET sl TO 0. } //ELSE {SET sl TO 1. }
