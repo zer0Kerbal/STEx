@@ -1,11 +1,13 @@
 // SGEx (StarGuise Experimental)
+// - 
+// FILE: wd_ShipSunlight.ks
+// TYPE: word (wd_)
+// - 
+// Calculate If your ship is in darkness to its ORBIT:BODY
+// - 
 // Shamelessly nicked from legnad1
 // via: /r/Kos/comments/7a3xbn/calculate_if_your_ship_is_in_darkness_to_its/
-//
-// FILE: 	wd_ShipSunlight.ks
-// SUBTYPE:	word (wd_)
 // - 
-//
 // AUTHOR: zer0Kerbal
 // https://github.com/zer0Kerbal/SGEx/releases
 // ——————————————————————————————————————————————————
@@ -16,46 +18,46 @@
 // Ω Requires: kOS
 // Ω Requires: Kerbal Space Program
 // ——————————————————————————————————————————————————
-// creation: 	
-// last update:	
-// Calculate If your Ship is in darkness to its ORBIT:BODY
-//This short script detemines wether your Ship is in darkness or sunlight (respective to the parent body - it does not take into account moons or other bodies - ONLY the parent body).
+// creation: 27 Jul 18
+// last upd: 27 Jul 18
+// - 
+// determines if ship is in sunlight (respective to the parent body - it does not take into account moons or other bodies - ONLY the parent body).
 // https://pastebin.com/iby5awyG
 
 @LAZYGLOBAL off.
-function ktc_ship_sunlight {
-    parameter AtUT is TIME:SECONDS.
-    SET vec_ship TO SHIP:POSITION.
-    SET vec_ship_future TO POSITIONAT(SHIP,atut).
+function shipsunlight {
+    parameter _now is TIME:SECONDS.
+	SET sl TO 1.
+    SET vShp TO SHIP:POSITION.
+    SET vShpFutr TO POSITIONAT(SHIP,_now).
    
-    SET vec_ship_sun TO POSITIONAT(BODY("SUN"), TIME:SECONDS).
-    SET vec_ship_body TO POSITIONAT(ORBIT:BODY, TIME:SECONDS).
+    SET vShpSun TO POSITIONAT(BODY("SUN"), TIME:SECONDS).
+    SET vShpBdy TO POSITIONAT(ORBIT:BODY, TIME:SECONDS).
    
-    SET vec_ship_future_body TO -vec_ship_body + vec_ship_future.
-    SET vec_ship_future_sun TO -vec_ship_sun + vec_ship_future.
+    SET vShpFutrBdy TO -vShpBdy + vShpFutr.
+    SET vShpFutrSun TO -vShpSun + vShpFutr.
    
-    SET vec_sun_body TO -vec_ship_sun + vec_ship_body.
+    SET vSunBdy TO -vShpSun + vShpBdy.
    
-    SET shade_angle TO arctan(ORBIT:BODY:RADIUS/vec_sun_body:MAG).
-    IF (VANG(vec_sun_body,vec_ship_future_sun) < shade_angle)
-        AND (vec_ship_future_sun:MAG > vec_sun_body:MAG)
-    {
-        SET sunlight TO false.
-    } ELSE {
-        SET sunlight TO true.
-    }
-    return sunlight.
+    SET shdAng TO ARCTAN(ORBIT:BODY:RADIUS/vSunBdy:MAG).
+    IF (VANG(vSunBdy,vShpFutrSun) < shdAng)
+        AND (vShpFutrSun:MAG > vSunBdy:MAG)
+    { SET sl TO 0. } //ELSE {SET sl TO 1. }
+    return sl.
 }
 
 // TODO:
 // nuggreat
-// I am fairly positive you should be using arcSin not arcTan because the radius  is the opposite side to of the angle you want to find for the shadow and because your second distance is from the sun to the body it is the hypotenuse not the adjacent side of the angle you want.
-// The reasoning for this is that the line that defines the cross from between shadow and light it tangent (90 degrees) to the radius of the body. So the angle between the line from the sun to the body and the radius must be less than 90 degrees making the line from the sun to the body the hypotenuse not the adjacent side.
-// Admittedly the angle between the line from the sun to the body and the radius is so close to 90 degrees the inaccuracy is basically 0 but it is still incorrect and for bodies closer to the sun the use of arcTan would be less accurate.
+   // use arcSin not arcTan #29
+   // raised issue concerning ARCSIN vs ARCTAN #29
+   // raised issue concerning code change to set1 early #30
 
-// v 0.0.0.1
-	// creation by zer0Kerbal
-	// License (s.i.c.)
+// v0.0.0.2
+   // code cleaning pass one
+
+// v0.0.0.1
+   // creation by zer0Kerbal
+   // License (s.i.c.)
 	
 //
 // Copyright © 2017-2018, zer0Kerbal and StarGuise Experimental (SGEx)
