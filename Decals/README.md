@@ -3,7 +3,7 @@
 ## SGEx-Decals
 
 ### Decals:
-  1. Tugboat Green
+  1. Tugboat Green (256x160)
   
   **planned**
   * Tugboat Nuclear (various coloring, some with additional graphics)
