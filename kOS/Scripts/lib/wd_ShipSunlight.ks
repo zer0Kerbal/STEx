@@ -28,27 +28,28 @@
 function shipsunlight {
     parameter _now is TIME:SECONDS.
 	
-	SET sl TO 1.
-    SET vShp TO SHIP:POSITION.
-    SET vShpFutr TO POSITIONAT(SHIP,_now).
-    SET vShpSun TO POSITIONAT(BODY("SUN"), TIME:SECONDS).
-    SET vShpBdy TO POSITIONAT(ORBIT:BODY, TIME:SECONDS).
-    SET vShpFutrBdy TO -vShpBdy + vShpFutr.
-    SET vShpFutrSun TO -vShpSun + vShpFutr.
-    SET vSunBdy TO -vShpSun + vShpBdy.
-    SET shdAng TO ARCTAN(ORBIT:BODY:RADIUS/vSunBdy:MAG).
+    LOCAL pShpFutr IS POSITIONAT(SHIP,_now).
+    LOCAL pSun IS BODY("SUN"):POSITION.
+    LOCAL pShpBdy IS ORBIT:BODY:POSITION.
+    LOCAL vSunToShpFutr IS pShpFutr - pSun.
+    LOCAL vSunToBdy IS pShpBdy - pSun.
+    LOCAL shdAng IS ARCSIN(ORBIT:BODY:RADIUS/vSunToBdy:MAG).
 	
-    IF (VANG(vSunBdy,vShpFutrSun) < shdAng)
-        AND (vShpFutrSun:MAG > vSunBdy:MAG)
-    { SET sl TO 0. } //ELSE {SET sl TO 1. }
-    return sl.
+    RETURN (VANG(vSunToBdy,vSunToShpFutr) < shdAng) AND (vSunToShpFutr:MAG > vSunToBdy:MAG).
 }
 
-// TODO:
-// nuggreat
-   // use arcSin not arcTan #29
-   // raised issue concerning ARCSIN vs ARCTAN #29
-   // raised issue concerning code change to set1 early #30
+// v0.0.3
+	// changed arcTAN to arcSIN, fix incorrect math
+	// changed all variables to locals, while not needed i prefer explicit locals
+	// renamed vShpFutrSun to vSunToShpFutr, more explicitly describe the stored vector
+	// renamed vSunBdy to vSunToBdy, more explicitly describe the stored vector
+	// simplified vector math for vSunToShpFutr, vSunToBdy, while the results of the math is the same it is simpler and thus takes less CPU time
+	// simplified return logic, simpler to return the result of the boolean logic as apposed to a variable set by said logic
+	// renamed vShpSun to pSun, while there is no difference in between position vector and any other type of vector the use is different
+	// renamed vShpBdy to pShpBdy
+	// renamed vShpFutr to pShpFutr
+	// removed unused variables vShp, vShpFutrBdy, sl
+	// changed the positionAT calls current time and replaced with :POSITION suffix
 
 // v0.0.0.2
    // code cleaning pass one
