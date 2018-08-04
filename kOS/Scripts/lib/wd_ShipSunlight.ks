@@ -8,7 +8,7 @@
 // Shamelessly nicked from legnad1
 // via: /r/Kos/comments/7a3xbn/calculate_if_your_ship_is_in_darkness_to_its/
 // - 
-// AUTHOR: zer0Kerbal, nuggreat
+// AUTHOR: legnad1, nuggreat, and zer0Kerbal
 // https://github.com/zer0Kerbal/SGEx/releases
 // ——————————————————————————————————————————————————
 // status: β 1.0.0.0
