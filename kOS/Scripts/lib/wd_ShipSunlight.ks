@@ -11,7 +11,7 @@
 // AUTHOR: legnad1, nuggreat, and zer0Kerbal
 // https://github.com/zer0Kerbal/SGEx/releases
 // ——————————————————————————————————————————————————
-// status: β 1.0.0.0
+// status: β 1.0.0.3
 // ——————————————————————————————————————————————————
 // FOR: SGEx
 // ——————————————————————————————————————————————————
@@ -19,7 +19,7 @@
 // Ω Requires: Kerbal Space Program
 // ——————————————————————————————————————————————————
 // creation: 27 Jul 18
-// last upd: 27 Jul 18
+// last upd: 03 Aug 18
 // - 
 // determines if ship is in sunlight (respective to the parent body - it does not take into account moons or other bodies - ONLY the parent body).
 // https://pastebin.com/iby5awyG
@@ -39,24 +39,24 @@ function shipsunlight {
 }
 
 // v0.0.3
-	// changed arcTAN to arcSIN, fix incorrect math
-	// changed all variables to locals, while not needed i prefer explicit locals
-	// renamed vShpFutrSun to vSunToShpFutr, more explicitly describe the stored vector
-	// renamed vSunBdy to vSunToBdy, more explicitly describe the stored vector
-	// simplified vector math for vSunToShpFutr, vSunToBdy, while the results of the math is the same it is simpler and thus takes less CPU time
-	// simplified return logic, simpler to return the result of the boolean logic as apposed to a variable set by said logic
-	// renamed vShpSun to pSun, while there is no difference in between position vector and any other type of vector the use is different
-	// renamed vShpBdy to pShpBdy
-	// renamed vShpFutr to pShpFutr
-	// removed unused variables vShp, vShpFutrBdy, sl
-	// changed the positionAT calls current time and replaced with :POSITION suffix
+	// nuggreat: changed arcTAN to arcSIN, fix incorrect math
+	// nuggreat: changed all variables to locals, while not needed i prefer explicit locals
+	// nuggreat: renamed vShpFutrSun to vSunToShpFutr, more explicitly describe the stored vector
+	// nuggreat: renamed vSunBdy to vSunToBdy, more explicitly describe the stored vector
+	// nuggreat: simplified vector math for vSunToShpFutr, vSunToBdy, while the results of the math is the same it is simpler and thus takes less CPU time
+	// nuggreat: simplified return logic, simpler to return the result of the boolean logic as apposed to a variable set by said logic
+	// nuggreat: renamed vShpSun to pSun, while there is no difference in between position vector and any other type of vector the use is different
+	// nuggreat: renamed vShpBdy to pShpBdy
+	// nuggreat: renamed vShpFutr to pShpFutr
+	// nuggreat: removed unused variables vShp, vShpFutrBdy, sl
+	// nuggreat: changed the positionAT calls current time and replaced with :POSITION suffix
 
 // v0.0.0.2
    // code cleaning pass one
 
 // v0.0.0.1
    // creation by zer0Kerbal
-   // License (s.i.c.)
+   // License CC 4.0 BY-NC-SA
 	
 //
 // Copyright © 2017-2018, zer0Kerbal and StarGuise Experimental (SGEx)
