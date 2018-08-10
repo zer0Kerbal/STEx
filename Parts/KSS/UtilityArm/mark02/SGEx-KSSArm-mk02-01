@@ -1,43 +1,37 @@
-/ SGEx (StarGuise Experimental)
+// SGEx (StarGuise Experimental)
 // mk2 welded station utility arm, 1 of 4
-// FILE: 	SGEx-KSSArm-mk2-01a.cfg
+// FILE: 	SGEx-KSSArm-mk02-01a.cfg
 // SUBTYPE:	KSP Part
 // - 
 //
 // AUTHOR: zer0Kerbal
 // https://github.com/zer0Kerbal/SGEx/releases
 // ——————————————————————————————————————————————————
-// status: β 1.0.0.1
+// status: β 1.0.0.9
 // ——————————————————————————————————————————————————
 // FOR: SGEx
 // ——————————————————————————————————————————————————
 // Ω Requires: KSP
 // Ω Requires: NearFutureConstruction
-// Ω Requires: NearFuturePropulsion
 // Ω Requires: ChopShop
-// Ω Requires: Bluedog 
-// Ω Requires: WarpPlugin
-// Ω Optional: InterstellarFuelSwitch
-// Ω Optional: GPOSpeedPump
+// Ω Requires:  
 // Ω Optional: AmpYear
-// Ω Optional: RemoteTech
-// Ω Optional: kOS
-// Ω Optional: USI (warehousing)
-// Ω Optional: TweakScale
+// Ω Optional: GPOSpeedPump
+// Ω Optional:InterstellarFuelSwitch
+// Ω Optional:
 // ——————————————————————————————————————————————————
 // creation: 	
-// last update:
+// last upd: 09 Aug 18
 
 // TODO: 
 
 PART
 {
-	name = SGEx-KSSArm-mk2-01a
+	name = SGEx-KSSArm-mk02-01
 	module = Part
-	author = zer0Kerbal | UbioZurWeldingLtd
+	author = zer0Kerbal, UbioZurWeldingLtd
 	
 	rescaleFactor = 1
-	PhysicsSignificance = -1
 	
 	node_stack_top = -0.01, 4.43, 0, 0, 1, 0, 2
 	node_stack_bottom = -0.01, -5.23, 0, 0, -1, 0, 2
@@ -45,7 +39,7 @@ PART
 	CrewCapacity = 0
 	TechRequired = advMetalworks
 	entryCost = 362500
-	cost = 125510
+	cost = 50000 //25510 // 125510
 	category = Structural
 	subcategory = 0
 	
@@ -73,7 +67,7 @@ PART
 	heatConductivity = 0.12
 	emissiveConstant = 0.42
 	radiatorHeadroom = 0.25
-	bulkheadProfiles = size1,size2,srf
+	bulkheadProfiles = size2,srf
 	
 	MODEL
 	{
@@ -250,6 +244,12 @@ PART
 		amount = 45
 		maxAmount = 300
 	}
+	RESOURCE // TODO: REMOVE
+	{
+		name = LqdXenon
+		amount = 0
+		maxAmount = 300
+	}
 	MODULE
 	{
 		name = ModuleDockingNode
@@ -291,7 +291,7 @@ PART
 		RESOURCE
 		{
 			name = ElectricCharge
-			rate = 0.003
+			rate = 0.03
 		}
 	}
 	MODULE
@@ -306,17 +306,17 @@ PART
 		OUTPUT_RESOURCE
 		{
 			name = ElectricCharge
-			rate = 0.75
+			rate = 5.00 //0.75
 		}		
 		OUTPUT_RESOURCE
 		{
 			name = ReservePower
-			rate = 0.025
+			rate = 0.25
 		}
 		OUTPUT_RESOURCE
 		{
 			name = StoredCharge
-			rate = 0.01
+			rate = 1.0
 		}
 	}
 	MODULE
@@ -406,7 +406,6 @@ PART
 		areaMultiplier = 0.06
 		wasteHeatMultiplier = 0.06
 	}
-	MODULE { name = AYA_ActiveRadiator }
 	MODULE
 	{
 		name = ModuleDeployableSolarPanel
@@ -427,7 +426,6 @@ PART
 		resourceName = ElectricCharge
 		chargeRate = 72.2
 	}
-	MODULE { name = AYA_Solar }
 	MODULE
 	{
 		name = ModuleTweakableDeployablePanel
@@ -445,14 +443,14 @@ PART
 		PROPELLANT
 		{
 			name = XenonGas
-			ratio = 0.3
+			ratio = 0.1 // 0.3
 			DrawGauge = True
 			resourceFlowMode = STAGE_PRIORITY_FLOW
 		}
 		PROPELLANT
 		{
 			name = ElectricCharge
-			ratio = 3.954420
+			ratio = 3.954420 //11.86326
 			resourceFlowMode = STAGE_PRIORITY_FLOW
 		}
 		atmosphereCurve
@@ -491,7 +489,7 @@ PART
 		PowerDistributionRange = 2000
 	}
 	MODULE { name = ModuleLogisticsConsumer }
-//TweakScale
+
 	MODULE 
 	{
 		name = TweakScale
@@ -499,7 +497,6 @@ PART
 		defaultScale = 2.5
 		scaleFactors   = 0.078125, 0.15625, 0.3125, 0.625, 1.25, 2.5, 3.75, 5.0, 6.25, 7.5, 10, 15, 20
 	}
-	
 	MODULE
 	{
 		name = WeldedMeshSwitch
@@ -511,7 +508,7 @@ PART
 }
 
 // add Megajoules
-@PART[SGEx-KSSArm-mk2*]:NEEDS[InterstellarFuelSwitch]
+@PART[SGEx-KSSArm-mk02-01?]:NEEDS[InterstellarFuelSwitch]
 {
 	@description ^= :$: <color=orange>IFS - Megajoules. </color> :
 	MODULE
@@ -546,7 +543,7 @@ PART
 }
 	
 // add StoredCharge
-@PART[SGEx-KSSArm-mk2*]:NEEDS[InterstellarFuelSwitch] //:FOR[SGEx]
+@PART[SGEx-KSSArm-mk02-01?]:NEEDS[InterstellarFuelSwitch] //:FOR[SGEx]
 {
 	@description ^= :$: <color=orange>IFS - StoredCharge. </color> :
 	MODULE
@@ -583,13 +580,13 @@ PART
 	}
 }
 
-@PART[SGEx-KSSArm-mk2-01a]:NEEDS[kOS]
+@PART[SGEx-KSSArm-mk02-01?]:NEEDS[kOS]
 {
 	@description ^= :$: <color=orange>kOS Processor. </color> :
 	@MODULE[kOSProcessor]
 	{
 		%bootfile = /boot/ramp.boot.ks
-		%diskSpace = 250000
+		%diskSpace = 25000
 		%ECPerBytePerSecond = 0
 		%ECPerInstruction = 0.000004
 	}
@@ -599,14 +596,63 @@ PART
 	}
 }
 
+@PART[SGEx-KSSArm-mk02-01?]
+	@MODULE[MechJebCore]:NEEDS[MechJeb2]
+    {
+        name = MechJebCore
+        MechJebLocalSettings 
+		{
+            MechJebModuleCustomWindowEditor { unlockTechs = flightControl }
+            MechJebModuleSmartASS { unlockTechs = flightControl }
+            MechJebModuleManeuverPlanner { unlockTechs = advFlightControl }
+            MechJebModuleNodeEditor { unlockTechs = advFlightControl }
+            MechJebModuleTranslatron { unlockTechs = advFlightControl }
+            MechJebModuleWarpHelper { unlockTechs = advFlightControl }
+            MechJebModuleAttitudeAdjustment { unlockTechs = advFlightControl }
+            MechJebModuleThrustWindow { unlockTechs = advFlightControl }
+            MechJebModuleRCSBalancerWindow { unlockTechs = advFlightControl }
+            MechJebModuleRoverWindow { unlockTechs = fieldScience }
+            MechJebModuleAscentGuidance { unlockTechs = unmannedTech }
+            MechJebModuleLandingGuidance { unlockTechs = unmannedTech }
+            MechJebModuleSpaceplaneGuidance { unlockTechs = unmannedTech }
+            MechJebModuleDockingGuidance { unlockTechs = advUnmanned }
+            MechJebModuleRendezvousAutopilotWindow { unlockTechs = advUnmanned }
+            MechJebModuleRendezvousGuidance { unlockTechs = advUnmanned }
+        }
+    }
+	@MODULE[FlightEngineerModule]:NEEDS[KerbalEngineer] { name = FlightEngineerModule }
+}
+
+// @PART[SGEx-KSSArm-mk02-01?]
+// {
+	// MODEL
+	// {
+		// Squad/Parts/Electrical/z-400Battery/ksp_r_largeBatteryPack
+		// position = -0.28, 2.85, 0.54
+		// rotation = 0, 150, 90
+	// }
+	// MODEL
+	// {
+		// Squad/Parts/Electrical/z-400Battery/ksp_r_largeBatteryPack
+		// position = -0.34, 2.85, -0.5
+		// rotation = 0, 30, 90
+	// }
+	// MODEL
+	// {
+		// Squad/Parts/Electrical/z-400Battery/ksp_r_largeBatteryPack
+		// position = 0.59, 2.85, -0.03
+		// rotation = 0, 270, 90
+	// }
+// }
 	
 // ——————————————————————————————————————————————————
 // ——— changelog ————————————————————————————————————
 // ——————————————————————————————————————————————————
 
 // v.0.0.0.9
-  // uploaded to SGEx
- 
+	// name change
+	// correct optional battery model patch
+
 // v.0.0.0.8
 	// created version without construction port (for EL)
 
@@ -680,33 +726,31 @@ PART
 	
 // v 0.0.0.1
 	// creation by zer0Kerbal
-	// 
+	// License: CC 4.0 BY-NC-SA
 
-@PART[SGEx-KSSArm-mk2-01a]
-	@MODULE[MechJebCore]:NEEDS[MechJeb2]
-    {
-        name = MechJebCore
-        MechJebLocalSettings 
-		{
-            MechJebModuleCustomWindowEditor { unlockTechs = flightControl }
-            MechJebModuleSmartASS { unlockTechs = flightControl }
-            MechJebModuleManeuverPlanner { unlockTechs = advFlightControl }
-            MechJebModuleNodeEditor { unlockTechs = advFlightControl }
-            MechJebModuleTranslatron { unlockTechs = advFlightControl }
-            MechJebModuleWarpHelper { unlockTechs = advFlightControl }
-            MechJebModuleAttitudeAdjustment { unlockTechs = advFlightControl }
-            MechJebModuleThrustWindow { unlockTechs = advFlightControl }
-            MechJebModuleRCSBalancerWindow { unlockTechs = advFlightControl }
-            MechJebModuleRoverWindow { unlockTechs = fieldScience }
-            MechJebModuleAscentGuidance { unlockTechs = unmannedTech }
-            MechJebModuleLandingGuidance { unlockTechs = unmannedTech }
-            MechJebModuleSpaceplaneGuidance { unlockTechs = unmannedTech }
-            MechJebModuleDockingGuidance { unlockTechs = advUnmanned }
-            MechJebModuleRendezvousAutopilotWindow { unlockTechs = advUnmanned }
-            MechJebModuleRendezvousGuidance { unlockTechs = advUnmanned }
-        }
-    }
-	
-	@MODULE[FlightEngineerModule]:NEEDS[KerbalEngineer]
-	{name = FlightEngineerModule }
-}
+// 
+// Copyright © 2017-2018, zer0Kerbal
+// All rights reserved.
+//
+// Redistribution and use in source and binary forms, with or without modification,
+// are permitted provided that the following conditions are met:
+//
+// 1. Redistributions of source code must retain the above copyright notice,
+//    this list of conditions and the following disclaimer.
+//
+// 2. Redistributions in binary form must reproduce the above copyright notice,
+//    this list of conditions and the following disclaimer in the documentation and/or other
+//    materials provided with the distribution.
+//
+// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES,
+// INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+// DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+// SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+// WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+//
+// This software uses the ModuleManager library, © 2013-2014 Ialdabaoth (who is awesome), sarbian (who is also awesome), et al
+// Used under a Creative Commons Attribution-ShareAlike 3.0 Unported License.
+// 
+
