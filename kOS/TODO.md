@@ -1,4 +1,4 @@
-1. Merge in Toukie/KOS GAPAPOV into RAMP.  
+1. Merge in Toukie/KOS GAPAPOV into RAMP.  UNKNOWN LICENCE - aka no license listed.
    a.  have to determine overlap  
    b.  determine which is best  
    c.  merge into function lexicon method within runmode OS style with GUI.  
