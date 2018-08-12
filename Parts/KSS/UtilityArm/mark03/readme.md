@@ -5,7 +5,7 @@
 
 ### **mark three** Utility Station Arm
 
-[Prototype for the mark III](https://raw.githubusercontent.com/zer0Kerbal/SGEx/Dev/Parts/img/SGEx-KSSArm-mk3.png "Prototype for the mark III")
+![Prototype for the mark III](https://raw.githubusercontent.com/zer0Kerbal/SGEx/Dev/Parts/img/SGEx-KSSArm-mk3.png "Prototype for the mark III")
 
  License  
 ![[CC 4.0 BY-NC-SA](https://creativecommons.org/licenses/by-nc-sa/4.0/)](https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png "CC 4.0 BY-NC-SA")
