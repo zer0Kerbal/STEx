@@ -4,7 +4,7 @@ StarGuise Experimental
 
 TWYLLTR (Take What You Like, Leave the Rest) collection.  
  
-📌v0.0.0.9-alpha
+📌v0.0.1.0-alpha
 
 ## helpful links
 https://regex101.com/r/OirPNn/1
@@ -22,4 +22,4 @@ License
 ##### All bundled mods are distributed under their own licenses
 ##### All art assets (textures, models, animations) are distributed under an All Rights Reserved License.
 
-###### v0.0.0.9 10 Aug 2018 0K
+###### v0.0.1.0 19 Aug 2018 0K
