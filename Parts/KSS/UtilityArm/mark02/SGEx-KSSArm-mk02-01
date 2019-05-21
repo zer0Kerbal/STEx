@@ -1,0 +1,756 @@
+// SGEx (StarGuise Experimental)
+// mk2 welded station utility arm, 1 of 4
+// FILE: 	SGEx-KSSArm-mk02-01a.cfg
+// SUBTYPE:	KSP Part
+// - 
+//
+// AUTHOR: zer0Kerbal
+// https://github.com/zer0Kerbal/SGEx/releases
+// ——————————————————————————————————————————————————
+// status: β 1.0.0.9
+// ——————————————————————————————————————————————————
+// FOR: SGEx
+// ——————————————————————————————————————————————————
+// Ω Requires: KSP
+// Ω Requires: NearFutureConstruction
+// Ω Requires: ChopShop
+// Ω Requires:  
+// Ω Optional: AmpYear
+// Ω Optional: GPOSpeedPump
+// Ω Optional:InterstellarFuelSwitch
+// Ω Optional:
+// ——————————————————————————————————————————————————
+// creation: 	
+// last upd: 09 Aug 18
+
+// TODO: 
+
+PART
+{
+	name = SGEx-KSSArm-mk02-01
+	module = Part
+	author = zer0Kerbal, UbioZurWeldingLtd
+	
+	rescaleFactor = 1
+	
+	node_stack_top = -0.01, 4.43, 0, 0, 1, 0, 2
+	node_stack_bottom = -0.01, -5.23, 0, 0, -1, 0, 2
+	
+	CrewCapacity = 0
+	TechRequired = advMetalworks
+	entryCost = 362500
+	cost = 50000 //25510 // 125510
+	category = Structural
+	subcategory = 0
+	
+	title = SGEx KSS Arm 01 (inner) CPORT <color=yellow> **mk2** </color>
+	manufacturer = <color=green>SGEx</color> SGEx, StarGuise Experimental, UbioZur Welding Ltd
+	description =  <color=green>SGEx</color> <color=yellow> **mk2** </color> Kerbal Space Station (KSS) Utility Arm 01 (inside (1 of 4)). This version contains a Construction Port (CPort). Additonal space for even more solar arrays and antenna. Use Construction Ports to weld this log together. Watch out for Ants!  Warranty valid only in normal gravity.
+	
+	tags = SGEx arm station gird hex solar array weld truss utility connect frame scaffold structur strut connect frame scaffold structur strut mk2 (star (exper
+	
+	// attachment rules: stack, srfAttach, allowStack, allowSrfAttach, allowCollision
+	attachRules = 1,0,1,1,0
+	
+	mass = 4.45 //4.453500032
+	dragModelType = default
+	maximum_drag = 0.18
+	minimum_drag = 0.18
+	angularDrag = 1.11
+	crashTolerance = 33.47
+	breakingForce = 72
+	breakingTorque = 72
+	maxTemp = 1696
+	fuelCrossFeed = True
+	explosionPotential = 0.5
+	thermalMassModifier = 0.99997
+	heatConductivity = 0.12
+	emissiveConstant = 0.42
+	radiatorHeadroom = 0.25
+	bulkheadProfiles = size2,srf
+	
+	MODEL
+	{
+		model = SGEx/Parts/Konstruction/ConstructionPort1/model
+		position = -0.01, 4.14, 0
+	}
+	MODEL
+	{
+		model = SGEx/Parts/Electrical/quantumBattery_sz0/model
+		position = -0.01, 4.03, 0
+	}
+	MODEL
+	{
+		model = SGEx/Parts/Electrical/quantumBattery_sz0/model
+		position = -0.01, 3.81, 0
+	}
+	MODEL
+	{
+		model = SGEx/Parts/Electrical/quantumBattery_sz0/model
+		position = -0.01, 3.59, 0
+	}
+	MODEL
+	{
+		model = SGEx/Parts/Electrical/quantumBattery_sz0/model
+		position = -0.01, 3.37, 0
+	}
+	MODEL
+	{
+		model = Squad/Parts/Command/probeCoreOcto2/model
+		position = -0.01, 3.2, 0
+	}
+	MODEL
+	{
+		model = NearFutureConstruction/Parts/Truss/truss-hex/truss-hex-adapter-01
+		position = -0.01, 2.9, 0
+		rotation = 0, 180, 180
+	}
+	MODEL
+	{
+		model = NearFutureConstruction/Parts/Truss/truss-hex/truss-hex-01
+		position = -0.01, 0.78, 0
+	}
+	MODEL
+	{
+		model = NearFutureConstruction/Parts/Truss/truss-hex/truss-hex-01
+		position = -0.01, -2.96, 0
+	}
+	MODEL
+	{
+		model = Bluedog_DB/Parts/Antennas/bluedog_mariner4Antenna
+		position = 0.7, -2.96, 0.01
+		scale = 1.4, 1.4, 1.4
+		rotation = 90, 90, 0
+	}
+	MODEL
+	{
+		model = WarpPlugin/Parts/Radiators/FlatGrapheneRadiator/rover_sp_rugged
+		position = 0.69, -1.34, 0
+		scale = 2.62, 3, 1.5
+		rotation = 90, 90, 0
+	}
+	MODEL
+	{
+		model = WarpPlugin/Parts/Radiators/FlatGrapheneRadiator/rover_sp_rugged
+		position = -0.36, -1.34, -0.61
+		scale = 2.62, 3, 1.5
+		rotation = 90, 210, 0
+	}
+	MODEL
+	{
+		model = WarpPlugin/Parts/Radiators/FlatGrapheneRadiator/rover_sp_rugged
+		position = -0.36, -1.34, 0.61
+		scale = 2.62, 3, 1.5
+		rotation = 90, 330, 0
+	}
+	MODEL
+	{
+		model = ChopShop/Utility/Electrics/SmartSolarPanel/ssp2
+		position = -0.01, -5.03, 0
+		rotation = 0, 0, 180
+	}
+	MODEL
+	{
+		model = WarpPlugin/Parts/Radiators/FlatGrapheneRadiator/rover_sp_rugged
+		position = 0.69, 1.2, 0
+		scale = 2.62, 3, 1.5
+		rotation = 90, 90, 0
+	}
+	MODEL
+	{
+		model = WarpPlugin/Parts/Radiators/FlatGrapheneRadiator/rover_sp_rugged
+		position = -0.36, 1.2, -0.61
+		scale = 2.62, 3, 1.5
+		rotation = 90, 210, 0
+	}
+	MODEL
+	{
+		model = WarpPlugin/Parts/Radiators/FlatGrapheneRadiator/rover_sp_rugged
+		position = -0.36, 1.2, 0.61
+		scale = 2.62, 3, 1.5
+		rotation = 90, 330, 0
+	}
+	MODEL
+	{
+		model = NearFuturePropulsion/Parts/RCS/rcsblock-electric/rcsblock-mpdt-quint-02
+		position = 0.46, 2.54, -0.81
+		scale = 1.25, 1.25, 1.25
+		rotation = 0, 240, 0
+	}
+	MODEL
+	{
+		model = NearFuturePropulsion/Parts/RCS/rcsblock-electric/rcsblock-mpdt-quint-02
+		position = -0.94, 2.54, 0
+		scale = 1.25, 1.25, 1.25
+	}
+	MODEL
+	{
+		model = NearFuturePropulsion/Parts/RCS/rcsblock-electric/rcsblock-mpdt-quint-02
+		position = 0.46, 2.54, 0.81
+		scale = 1.25, 1.25, 1.25
+		rotation = 0, 120, 0
+	}
+	RESOURCE
+	{
+		name = ElectricCharge
+		amount = 125000
+		maxAmount = 125000
+	}
+	RESOURCE
+	{
+		name = ReservePower
+		amount = 0
+		maxAmount = 62150
+	}
+	RESOURCE
+	{
+		name = StoredCharge
+		amount = 0
+		maxAmount = 100000
+	}
+	RESOURCE
+	{
+		name = Megajoules
+		amount = 0
+		maxAmount = 2500
+	}
+	RESOURCE
+	{
+		name = LiquidFuel
+		amount = 0
+		maxAmount = 1440
+	}
+	RESOURCE
+	{
+		name = Oxidizer
+		amount = 0
+		maxAmount = 1760
+	}
+	RESOURCE
+	{
+		name = MonoPropellant
+		amount = 0
+		maxAmount = 3000
+	}
+	RESOURCE
+	{
+		name = WasteHeat
+		amount = 0
+		maxAmount = 7500
+	}
+	RESOURCE
+	{
+		name = XenonGas
+		amount = 45
+		maxAmount = 300
+	}
+	RESOURCE // TODO: REMOVE
+	{
+		name = LqdXenon
+		amount = 0
+		maxAmount = 300
+	}
+	MODULE
+	{
+		name = ModuleDockingNode
+		referenceAttachNode = topConstructionPort10
+		nodeType = ConSize1
+		stagingEnabled = False
+		captureMinRollDot = 0.999
+		snapRotation = True
+		snapOffset = 90
+		acquireForce = 2
+		acquireTorque = 2
+		acquireTorqueRoll = 2
+	}
+	MODULE
+	{
+		name = ModuleWeldablePort
+	}
+	MODULE
+	{
+		name = ModuleDockingHatch
+		docNodeAttachmentNodeName = top
+		docNodeTransformName = dockingNode
+	}
+	MODULE
+	{
+		name = ModuleToggleCrossfeed
+		crossfeedStatus = True
+		toggleEditor = True
+		toggleFlight = True
+	}
+	MODULE
+	{
+		name = ModuleCommand
+		minimumCrew = 0
+		hasHibernation = True
+		hibernateOnWarp = True
+		hibernation = False
+		hibernationMultiplier = 0.005
+		RESOURCE
+		{
+			name = ElectricCharge
+			rate = 0.03
+		}
+	}
+	MODULE
+	{
+		name = ModuleSAS
+		SASServiceLevel = 1
+	}
+	MODULE
+	{
+		name = ModuleGenerator
+		isAlwaysActive = True
+		OUTPUT_RESOURCE
+		{
+			name = ElectricCharge
+			rate = 5.00 //0.75
+		}		
+		OUTPUT_RESOURCE
+		{
+			name = ReservePower
+			rate = 0.25
+		}
+		OUTPUT_RESOURCE
+		{
+			name = StoredCharge
+			rate = 1.0
+		}
+	}
+	MODULE
+	{
+		name = FNGeneratorAdapter
+	}
+	MODULE
+	{
+		name = ModuleAnimateGeneric
+		animationName = extendAntenna
+		isOneShot = False
+		startEventGUIName = Extend
+		endEventGUIName = Retract
+		actionGUIName = Toggle Antenna
+		allowAnimationWhileShielded = False
+		allowManualControl = False
+	}
+	MODULE
+	{
+		name = ModuleDataTransmitter
+		antennaType = INTERNAL
+		packetInterval = 1.0
+		packetSize = 2
+		packetResourceCost = 12.0
+		requiredResource = ElectricCharge
+		antennaPower = 5000000
+		optimumRange = 2500000
+		packetFloor = .1
+		packetCeiling = 5
+	}
+	MODULE
+	{
+		name = ModuleRTAntennaPassive
+		TechRequired = unmannedTech
+		OmniRange = 30000
+		TRANSMITTER
+		{
+			PacketInterval = 0.3
+			PacketSize = 2
+			PacketResourceCost = 15.0
+			name = ModuleRTDataTransmitter
+		}
+	}
+	MODULE
+	{
+		name = ModuleRTAntenna
+		Mode0OmniRange = 250000
+		Mode1OmniRange = 12000000
+		EnergyCost = 2.0
+		MaxQ = 6000
+		DeployFxModules = 0
+		TRANSMITTER
+		{
+			PacketInterval = 0.35
+			PacketSize = 2
+			PacketResourceCost = 12.0
+			name = ModuleRTDataTransmitter
+		}
+	}
+	MODULE	{ name = ModuleSPU	}
+	
+	MODULE
+	{
+		name = ModuleActiveRadiator
+		maxEnergyTransfer = 37500
+		overcoolFactor = 1.5
+		isCoreRadiator = True
+		maxLinksAway = 60
+		RESOURCE
+		{
+			name = ElectricCharge
+			rate = 0.375
+		}
+	}
+	MODULE
+	{
+		name = FlatFNRadiator
+		isDeployable = False
+		partMass = 0.0375
+		radiatorArea = 37.5
+		upgradeCost = 30
+		surfaceAreaUpgradeTechReq = metaMaterials
+		upgradeTechReqMk2 = heatManagementSystems
+		upgradeTechReqMk3 = advHeatManagement
+		upgradeTechReqMk4 = specializedRadiators
+		upgradeTechReqMk5 = exoticRadiators
+		areaMultiplier = 0.06
+		wasteHeatMultiplier = 0.06
+	}
+	MODULE
+	{
+		name = ModuleDeployableSolarPanel
+		animationName = ssp2_rotator
+		raycastTransformName = sensor
+		pivotName = Rotator
+		isBreakable = false
+		resourceName = ElectricCharge
+		chargeRate = 0
+	}
+	MODULE
+	{
+		name = ModuleDeployableSolarPanel
+		animationName = ssp2_wings
+		raycastTransformName = SunCatcher
+		pivotName = SolarPivot
+		isBreakable = true
+		resourceName = ElectricCharge
+		chargeRate = 72.2
+	}
+	MODULE
+	{
+		name = ModuleTweakableDeployablePanel
+		moduleType = ModuleDeployableSolarPanel
+	}
+	MODULE
+	{
+		name = ModuleRCSFX
+		stagingEnabled = False
+		thrusterTransformName = thrustVector
+		thrusterPower = 1.0
+		resourceName = XenonGas
+		resourceFlowMode = STAGE_PRIORITY_FLOW
+		runningEffectName = running
+		PROPELLANT
+		{
+			name = XenonGas
+			ratio = 0.1 // 0.3
+			DrawGauge = True
+			resourceFlowMode = STAGE_PRIORITY_FLOW
+		}
+		PROPELLANT
+		{
+			name = ElectricCharge
+			ratio = 3.954420 //11.86326
+			resourceFlowMode = STAGE_PRIORITY_FLOW
+		}
+		atmosphereCurve
+		{
+			key = 0,2950
+			key = 1,147.5
+			key = 3,0.00100000005
+		}
+	}
+	MODULE
+	{
+		name = ModuleRCSEmissive
+		alphaCurve
+		{
+			key = 0 0.0
+			key = 0.25 1.0
+		}
+	}
+	MODULE
+	{
+		name = GPOSpeedPump
+		isEnabled = True
+		_pumpLevel = 9
+		_autoPump = True
+		_autoBalance = True
+	}
+	MODULE 
+	{
+		name = USI_ModuleResourceWarehouse
+		soiTransferEnabled = True
+		localTransferEnabled = True
+	}	
+	MODULE
+	{
+		name = ModulePowerDistributor
+		PowerDistributionRange = 2000
+	}
+	MODULE { name = ModuleLogisticsConsumer }
+
+	MODULE 
+	{
+		name = TweakScale
+		type = stack
+		defaultScale = 2.5
+		scaleFactors   = 0.078125, 0.15625, 0.3125, 0.625, 1.25, 2.5, 3.75, 5.0, 6.25, 7.5, 10, 15, 20
+	}
+	MODULE
+	{
+		name = WeldedMeshSwitch
+		objectIndicies = 7; 8
+		objects = COLLIDERLRG,LargeTruss,HexLFOTankLong; COLLIDERLRG,LargeTruss,HexLFOTankLong
+		advancedDebug = True
+		destroyUnusedParts = True
+	}
+}
+
+// add Megajoules
+@PART[SGEx-KSSArm-mk02-01?]:NEEDS[InterstellarFuelSwitch]
+{
+	@description ^= :$: <color=orange>IFS - Megajoules. </color> :
+	MODULE
+	{
+		name = InterstellarResourceConverter
+		primaryResourceNames = Megajoules
+		secondaryResourceNames = ElectricCharge
+		maxPowerPrimary = 10
+		maxPowerSecondary = 10
+		primaryConversionCostPower = False
+		secondaryConversionCostPower = False
+		primaryNormalizedDensity = 1
+		secondaryNormalizedDensity = 0.001
+	}
+	MODULE
+	{
+		name = KspiSuperCapacitator
+		maxStorageCapacityMJ = 1
+		@maxStorageCapacityMJ = #$../RESOURCE[Megajoules]/maxAmount$ // 1:1 MJ
+		
+		partMass = 0.1
+		@partMass = #$../mass$
+	}
+	MODULE
+	{
+	name		=	ModuleElementRadioactiveDecay
+	decayConstant 	=	1.0e-6
+	resourceName	=	Megajoules
+	decayProduct	=	WasteHeat
+	convFactor	=	1.0
+	}
+}
+	
+// add StoredCharge
+@PART[SGEx-KSSArm-mk02-01?]:NEEDS[InterstellarFuelSwitch] //:FOR[SGEx]
+{
+	@description ^= :$: <color=orange>IFS - StoredCharge. </color> :
+	MODULE
+	{
+		name = InterstellarResourceConverter
+		primaryResourceNames = StoredCharge
+		secondaryResourceNames = ElectricCharge
+		maxPowerPrimary = 250
+		maxPowerSecondary = 250
+		primaryConversionCostPower = False
+		secondaryConversionCostPower = False
+		primaryNormalizedDensity = 2
+		secondaryNormalizedDensity = 1
+	}	
+	
+	MODULE
+	{
+		name = KspiSuperCapacitator
+		maxStorageCapacityMJ = 1
+		@maxStorageCapacityMJ = #$../RESOURCE[StoredCharge]/maxAmount$ // 1/1000 of total SC
+		@maxStorageCapacityMJ *= 0.001
+		
+		partMass = 0.1
+		@partMass = #$../mass$
+	}
+	
+	MODULE
+	{
+		name = ModuleElementRadioactiveDecay
+		decayConstant = 1.0e-6
+		resourceName = StoredCharge
+		decayProduct = WasteHeat
+		convFactor = 0.001
+	}
+}
+
+@PART[SGEx-KSSArm-mk02-01?]:NEEDS[kOS]
+{
+	@description ^= :$: <color=orange>kOS Processor. </color> :
+	@MODULE[kOSProcessor]
+	{
+		%bootfile = /boot/ramp.boot.ks
+		%diskSpace = 25000
+		%ECPerBytePerSecond = 0
+		%ECPerInstruction = 0.000004
+	}
+	@MODULE[KOSNameTag]
+	{
+		%nameTag = _KSSArm01
+	}
+}
+
+@PART[SGEx-KSSArm-mk02-01?]
+	@MODULE[MechJebCore]:NEEDS[MechJeb2]
+    {
+        name = MechJebCore
+        MechJebLocalSettings 
+		{
+            MechJebModuleCustomWindowEditor { unlockTechs = flightControl }
+            MechJebModuleSmartASS { unlockTechs = flightControl }
+            MechJebModuleManeuverPlanner { unlockTechs = advFlightControl }
+            MechJebModuleNodeEditor { unlockTechs = advFlightControl }
+            MechJebModuleTranslatron { unlockTechs = advFlightControl }
+            MechJebModuleWarpHelper { unlockTechs = advFlightControl }
+            MechJebModuleAttitudeAdjustment { unlockTechs = advFlightControl }
+            MechJebModuleThrustWindow { unlockTechs = advFlightControl }
+            MechJebModuleRCSBalancerWindow { unlockTechs = advFlightControl }
+            MechJebModuleRoverWindow { unlockTechs = fieldScience }
+            MechJebModuleAscentGuidance { unlockTechs = unmannedTech }
+            MechJebModuleLandingGuidance { unlockTechs = unmannedTech }
+            MechJebModuleSpaceplaneGuidance { unlockTechs = unmannedTech }
+            MechJebModuleDockingGuidance { unlockTechs = advUnmanned }
+            MechJebModuleRendezvousAutopilotWindow { unlockTechs = advUnmanned }
+            MechJebModuleRendezvousGuidance { unlockTechs = advUnmanned }
+        }
+    }
+	@MODULE[FlightEngineerModule]:NEEDS[KerbalEngineer] { name = FlightEngineerModule }
+}
+
+// @PART[SGEx-KSSArm-mk02-01?]
+// {
+	// MODEL
+	// {
+		// Squad/Parts/Electrical/z-400Battery/ksp_r_largeBatteryPack
+		// position = -0.28, 2.85, 0.54
+		// rotation = 0, 150, 90
+	// }
+	// MODEL
+	// {
+		// Squad/Parts/Electrical/z-400Battery/ksp_r_largeBatteryPack
+		// position = -0.34, 2.85, -0.5
+		// rotation = 0, 30, 90
+	// }
+	// MODEL
+	// {
+		// Squad/Parts/Electrical/z-400Battery/ksp_r_largeBatteryPack
+		// position = 0.59, 2.85, -0.03
+		// rotation = 0, 270, 90
+	// }
+// }
+	
+// ——————————————————————————————————————————————————
+// ——— changelog ————————————————————————————————————
+// ——————————————————————————————————————————————————
+
+// v.0.0.0.9
+	// name change
+	// correct optional battery model patch
+
+// v.0.0.0.8
+	// created version without construction port (for EL)
+
+// v.0.0.0.7	
+	// corrected solar array not opening
+	
+// v.0.0.0.6
+	// attempting to isolate
+	// moved back into part (not patch):
+		// kOS nameTag
+		// kOSProcessor
+		// TweakScale
+		// ReservePower
+		// GPOSpeedPump
+		// USI Logistics
+		
+// v.0.0.0.5
+	// install CommNet
+	// move RemoteTech to patch
+	// moved batteries to optional patch
+	// removed AYA patches (overkill)
+	// instead of adding multiple modules to all, just adding to inner arm
+	
+// v.0.0.0.4
+	// cleaning code
+	// added AllYAll patches
+	// MechJeb
+	// FlightEngineer
+	
+// v.0.0.0.3
+	// slight tweaks
+	// file name change
+	// moved MonoPropellant from another (1 of 4)
+	// kOSProcessor patch adjusted
+	// top node correct
+	// bottom node correct
+	// logistics patch working
+	// switched to size2 nodes
+	// soft delete (hide) old arm parts
+
+// v.0.0.0.2
+	// changed TechRequired to advMetalworks to match rest of arm
+	// changed cost
+	// changed category to Structural to match rest of arm
+	// corrected PART[]:NEEDS[kOS] patch
+	// made MM patches more restrictive: SGEx-KSSArm?-mk2
+	// extra 'n' in 'name' prevented part load
+	
+// mark 2
+// v.0.0.0.1
+	// new mesh weld
+	// copy / update from mk1
+	// add AmpYear patch
+	// add Megajoules patch
+	// add StoredCharge patch
+	// add TweakScale patch
+	
+// v.1.0.0.0
+	// beta release
+	
+// v 1.0.0.2
+	// testing and tweaking
+
+// v 1.0.0.1
+	// fileheader and changelog
+		
+// v 1.0.0.0
+	// creation by zer0Kerbal via UbioZurWeldingLtd
+	// Part cleanup and changes
+	// attachRules
+	
+// v 0.0.0.1
+	// creation by zer0Kerbal
+	// License: CC 4.0 BY-NC-SA
+
+// 
+// Copyright © 2017-2018, zer0Kerbal
+// All rights reserved.
+//
+// Redistribution and use in source and binary forms, with or without modification,
+// are permitted provided that the following conditions are met:
+//
+// 1. Redistributions of source code must retain the above copyright notice,
+//    this list of conditions and the following disclaimer.
+//
+// 2. Redistributions in binary form must reproduce the above copyright notice,
+//    this list of conditions and the following disclaimer in the documentation and/or other
+//    materials provided with the distribution.
+//
+// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES,
+// INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+// DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+// SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+// WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+//
+// This software uses the ModuleManager library, © 2013-2014 Ialdabaoth (who is awesome), sarbian (who is also awesome), et al
+// Used under a Creative Commons Attribution-ShareAlike 3.0 Unported License.
+// 
+

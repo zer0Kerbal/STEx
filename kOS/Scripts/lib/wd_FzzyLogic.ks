@@ -1,6 +1,9 @@
 // SGEx (StarGuise Experimental)
 //
-// FILE: 	wd_sciencelab.ks
+// FILE: 	wd_FzzyLogic.ks
+//
+// provides simple fuzzy logic (ishyiness) function
+//
 // SUBTYPE:	word (wd_)
 // - 
 //
@@ -11,81 +14,30 @@
 // ——————————————————————————————————————————————————
 // FOR: SGEx
 // ——————————————————————————————————————————————————
+// https://github.com/gisikw/ksprogramming/blob/master/episodes/e006/mfb01.002.ks
+// thank you to cheerskevin (Kevin Gisi)
+// ——————————————————————————————————————————————————
 // Ω Requires: 
 // Ω Requires: 
 // ——————————————————————————————————————————————————
-// creation: 	
-// last update:	27 Jul 18
-
-// science lab utilities
+// creation: 	27 July 18
+// last update:	27 July 18
+// fuzzy logic function
 
 @LAZYGLOBAL off.
-parameter HELP is 0.
 
-declare global function ListScienceLabModules {
-    declare local ScienceLabModules to list().
-    declare local partList to ship:parts.
-
-	PRINT "Transmitting Available Science Research".
-    for thePart in partList {
-        declare local moduleList to thePart:modules.
-        from {local i is 0.} until i = moduleList:length step {set i to i+1.} do {
-            set theModule to moduleList[i].
-            // just check for the Module Name. This might be extended in the future.
-            if (theModule = "ModuleScienceLab") or (theModule = "DMModuleScienceAnimate") {
-//            if (theModule = "ModuleScienceLab") {
-                ScienceLabModules:add(thePart:getModuleByIndex(i)). // add it to the list
-				thePart:getModuleByIndex(i):DOEVENT("Transmit Science").
-            }
-        }
-    }
-    LOG ScienceLabModules TO SciMods.
-    return ScienceLabModules.
+GLOBAL FUNCTION fzzy {
+  PARAMETER a,b,ishyiness is 0.5.
+  RETURN a - ishyiness < b AND a + ishyiness > b.
 }
-
-declare global FUNCTION partsLabTransmitScience { 
-	PRINT "Transmitting Available Science Research".
-    FOR P IN SHIP:PARTS {
-        IF P:MODULES:CONTAINS("ModuleScienceLab") {
-            P:GETMODULE("ModuleScienceLab").
-            FOR A IN M:ALLACTIONNAMES() {
-                IF A:CONTAINS("tranmit science") { M:DOACTION(A,True). }
-            }.
-        }
-    }.
-}
-
-DECLARE GLOBAL FUNCTION ScienceLabHelp{
-	PRINT "partsLabTransmitScience(). steps through transmits from all parts and those parts that have ModuleScienceLab AND have science data researched."
-	PRINT "ListScienceLabModules(). creates a log file named SciMods on current active volume AND returns a list of parts with ModuleScienceLab or DMModuleScienceAnimate in them.
-	SET HELP TO 0.
-	}
-
-IF HELP { ScienceLabHelp(). }.
 
 // ——————————————————————————————————————————————————
 // ——— changelog ————————————————————————————————————
 // ——————————————————————————————————————————————————
-// TODO: 
-	// Part:GETMODULE(“module name”).
-	// are there any "ModuleScienceLab" on ship?
-	//	if yes, then step through them and transmit science if enough energy
-	// stretch - how long. and warp to that point
-	// stretch - choose best choice to xmit - shut off all others until xmit=done.
-	// also check to see if cleanup needed and exec cleanup
-	// OnTransmissionComplete
-	// GetScienceCount < 1
-	// CleanUpVesselExperiments	(	Vessel 	v	)	
-	// OnTransmissionComplete (ScienceData data, Vessel origin, bool xmitAborted)
-	// TransmissionErrorScreenMessage (string reason)
-	// S.I.C sn_ScienceRelay.ks
-	
-// v 0.0.0.2
-   // converted into primative library file	
 
-   // v 0.0.0.1
+// v 0.0.0.1
 	// creation by zer0Kerbal
-	// License (S.I.C.)
+	// 
 	
 //
 // Copyright © 2017-2018, zer0Kerbal and StarGuise Experimental (SGEx)
