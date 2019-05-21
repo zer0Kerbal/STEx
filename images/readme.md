@@ -1,1 +1,2 @@
-images for forum and other uses
+images for forums and other uses
+
