@@ -47,4 +47,4 @@ You should have received a copy of the license along with this work. If not, vis
 [NH:contributor-zer0Kerbal-link]: https://github.com/zer0Kerbal
 [NH:original-forum-link]:       http://forum.kerbalspaceprogram.com/index.php
 [NH:shield-license]:            https://img.shields.io/badge/License-CC--BY--NC--SA%204.0-green.svg
-[NH:shield-version]:            https://img.shields.io/badge/KSP%20Version-1.7.1-brightgreen.svg?style=popout-square&logo=appveyor
+[NH:shield-version]:            https://img.shields.io/badge/KSP%20Version-1.7.2-brightgreen.svg?style=popout-square&logo=appveyor
